@@ -26,7 +26,7 @@ app.use((req, res) => {
 // Start the server and connect to the database
 const startServer = () => {
   try {
-    mongoose.connect('mongodb://127.0.0.1:27017/assignment');
+    mongoose.connect(MONGO_URL);
     console.log("Database connected");
     app.listen(PORT, () => {
       console.log("Server is running on port", PORT);
